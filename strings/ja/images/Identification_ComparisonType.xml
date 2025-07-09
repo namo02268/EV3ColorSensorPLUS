@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definition>
+    <Entry Name="Equal" DisplayName="～と等しい"/>
+    <Entry Name="NotEqual" DisplayName="～と等しくありません"/>
+    <Entry Name="Greater" DisplayName="～超過"/>
+    <Entry Name="GreaterEqual" DisplayName="～以上"/>
+    <Entry Name="Less" DisplayName="～未満"/>
+    <Entry Name="LessEqual" DisplayName="～以下"/>
+</Definition>

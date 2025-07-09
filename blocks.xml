@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EditorDefinitions>
+  <PolyGroups ModuleName="ColorSensorPLUS" ModuleVersion="1.0.0">
+    <PolyGroup Name="ColorSensorPLUS" BlockFamily="Sensor">
+      <Parameter Name="Port" CompilerDirectives="OneInputPort" Direction="Input" DefaultValue="1.3" />
+
+      <Parameter Name="Color" Identification="Identification_MeasuredColor.png" DataType="Single" Direction="Output" />
+      <Parameter Name="Value" Identification="Identification_MeasuredLight.png" DataType="Single" Direction="Output" />
+      <Parameter Name="Comparison" Direction="Input" Configuration="Identification_ComparisonType.xml" Identification="Identification_ComparisonType.xml" DataType="Int32" DefaultValue="4" />
+      <Parameter Name="Threshold" Identification="Identification_Threshold_ColorSensor_2.xml" DataType="Single" Direction="Input" DefaultValue="50" MinValue="0" MaxValue="100" />
+      <Parameter Name="Result" CompilerDirectives="Result" Identification="Identification_Result.png" DataType="Boolean" Direction="Output"/>
+
+      <Parameter Name="CalibrateValueMin" Direction="Input" DataType="Single" Identification="Identification_MeasuredLight.png" DefaultValue="0" MinValue="0" MaxValue="100" />
+      <Parameter Name="CalibrateValueMax" Direction="Input" DataType="Single" Identification="Identification_MeasuredLight.png" DefaultValue="100" MinValue="0" MaxValue="100" />
+
+      <Parameter Name="Red" Identification="Identification_Color_Red.png" DataType="Single" Direction="Output" />
+      <Parameter Name="Green" Identification="Identification_Color_Green.png" DataType="Single" Direction="Output" />
+      <Parameter Name="Blue" Identification="Identification_Color_Blue.png" DataType="Single" Direction="Output" />
+
+      <Parameter Name="Red_Min" Identification="Identification_Color_Red_Min.png" DataType="Single" Direction="Input" DefaultValue="20"/>
+      <Parameter Name="Red_Max" Identification="Identification_Color_Red_Max.png" DataType="Single" Direction="Input" DefaultValue="80"/>
+      <Parameter Name="Green_Min" Identification="Identification_Color_Green_Min.png" DataType="Single" Direction="Input" DefaultValue="110"/>
+      <Parameter Name="Green_Max" Identification="Identification_Color_Green_Max.png" DataType="Single" Direction="Input" DefaultValue="170"/>
+      <Parameter Name="Blue_Min" Identification="Identification_Color_Blue_Min.png" DataType="Single" Direction="Input" DefaultValue="20"/>
+      <Parameter Name="Blue_Max" Identification="Identification_Color_Blue_Max.png" DataType="Single" Direction="Input" DefaultValue="80"/>
+
+      <Parameter Name="Color_Range" Direction="Input" DataType="Boolean" DefaultValue="True" Identification="Identification_ColorRange.xml" Configuration="Identification_ColorRange.xml" />
+
+      <Hardware>
+        <NXTPlotColor>#ffff3132</NXTPlotColor>
+        <EV3PlotColor>#ff785028</EV3PlotColor>
+        <EV3AutoID>29</EV3AutoID>
+        <OtherAutoID>4</OtherAutoID>
+        <OtherAutoID>2</OtherAutoID>
+        <Direction>Input</Direction>
+        <DefaultPort>1.3</DefaultPort>
+      </Hardware>
+      <Block>
+        <Mode>MeasureColor</Mode>
+        <Reference Type="VILib" Name="ColorValue_PLUS.vix" />
+        <ParameterReference Name="Port" />
+        <ParameterReference Name="Color" />
+        <PaletteInfo Weight="0.5" />
+        <BlockInterface>Measure</BlockInterface>
+        <Flags>PBROnly</Flags>
+        <Hardware></Hardware>
+      </Block>
+      <Block>
+        <Mode>MeasureRawRGB</Mode>
+        <Reference Type="VILib" Name="RawRGB_PLUS.vix" />
+        <ParameterReference Name="Port" />
+        <ParameterReference Name="Red" />
+        <ParameterReference Name="Green" />
+        <ParameterReference Name="Blue" />
+        <BlockInterface>Measure</BlockInterface>
+        <Flags>PBROnly</Flags>
+        <Hardware></Hardware>
+      </Block>
+      <Block>
+        <Mode>MeasureReflectedLight</Mode>
+        <Reference Type="VILib" Name="ColorReflectedIntensity_PLUS.vix" />
+        <ParameterReference Name="Port" />
+        <ParameterReference Name="Value" />
+        <BlockInterface>Measure</BlockInterface>
+        <Flags>PBROnly</Flags>
+        <Hardware></Hardware>
+      </Block>
+      <Block>
+        <Mode>MeasureAmbientLight</Mode>
+        <Reference Type="VILib" Name="ColorAmbientIntensity_PLUS.vix" />
+        <ParameterReference Name="Port" />
+        <ParameterReference Name="Value" />
+        <BlockInterface>Measure</BlockInterface>
+        <Flags>PBROnly</Flags>
+        <Hardware></Hardware>
+      </Block>
+      <Block>
+        <Mode>CompareColor</Mode>
+        <Reference Type="VILib" Name="ColorCompare_PLUS.vix" />
+        <ParameterReference Name="Port" />
+        <ParamInfo Name="Set of colors" Direction="Input" Configuration="Identification_Color.xml" Identification="Identification_Color.xml" DataType="Single[]" DefaultValue="[5]" />
+        <ParameterReference Name="Result" />
+        <ParameterReference Name="Color" />
+        <BlockInterface>Compare</BlockInterface>
+        <Flags>PBROnly</Flags>
+      </Block>
+      <Block>
+        <Mode>CompareRawRGB</Mode>
+        <Reference Type="VILib" Name="RawRGBCompare_PLUS.vix" />
+        <ParameterReference Name="Port" />
+        <ParameterReference Name="Red_Min" />
+        <ParameterReference Name="Red_Max" />
+        <ParameterReference Name="Green_Min" />
+        <ParameterReference Name="Green_Max" />
+        <ParameterReference Name="Blue_Min" />
+        <ParameterReference Name="Blue_Max" />
+        <ParameterReference Name="Color_Range" />
+        <ParameterReference Name="Result" />
+        <BlockInterface>Compare</BlockInterface>
+        <Flags>PBROnly</Flags>
+        <Hardware></Hardware>
+      </Block>
+      <Block>
+        <Mode>CompareReflectedLight</Mode>
+        <Reference Type="VILib" Name="ColorReflectedIntensityCompare_PLUS.vix" />
+        <ParameterReference Name="Port" />
+        <ParameterReference Name="Comparison" />
+        <ParameterReference Name="Threshold" />
+        <ParameterReference Name="Result" />
+        <ParameterReference Name="Value" />
+        <BlockInterface>Compare</BlockInterface>
+        <Flags></Flags>
+      </Block>
+      <Block>
+        <Mode>CompareAmbientLight</Mode>
+        <Reference Type="VILib" Name="ColorAmbientIntensityCompare_PLUS.vix" />
+        <ParameterReference Name="Port" />
+        <ParameterReference Name="Comparison" />
+        <ParameterReference Name="Threshold" />
+        <ParameterReference Name="Result" />
+        <ParameterReference Name="Value" />
+        <BlockInterface>Compare</BlockInterface>
+        <Flags></Flags>
+      </Block>
+      <Category Name="Calibrate">
+        <Category Name="ReflectedLight">
+          <Block>
+            <Mode>CalibrateMinColor</Mode>
+            <Reference Type="VILib" Name="ColorCalibrateMin_PLUS.vix" />
+            <ParameterReference Name="CalibrateValueMin" />
+            <Hardware>NxtLight</Hardware>
+            <Flags>PBROnly</Flags>
+          </Block>
+          <Block>
+            <Mode>CalibrateMaxColor</Mode>
+            <Reference Type="VILib" Name="ColorCalibrateMax_PLUS.vix" />
+            <ParameterReference Name="CalibrateValueMax" />
+            <Hardware>NxtLight</Hardware>
+            <Flags>PBROnly</Flags>
+          </Block>
+          <Block>
+            <Mode>CalibrateResetColor</Mode>
+            <Reference Type="VILib" Name="ColorCalibrateDefault_PLUS.vix" />
+            <Hardware>NxtLight</Hardware>
+            <Flags>PBROnly</Flags>
+          </Block>
+        </Category>
+      </Category>
+    </PolyGroup>
+  </PolyGroups>
+</EditorDefinitions>

@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EditorStrings>
+  <PolyGroups ModuleName="ColorSensorPLUS">
+    <PolyGroup Name="ColorSensorPLUS" DisplayName="カラー センサー PLUS">
+      <Description><![CDATA[<p>Context help for PolyGroup <b>Color Sensor</b></p>]]></Description>
+      <Parameter Name="Port" DisplayName="ポート" Link="page.html?Path=editor%2FPortSelector.html#Port">
+        <Description><![CDATA[多くのプログラミング ブロックでは、 EV3ブロックのポート（A、B、C、D、1、2、3、および4）を選択する必要があります。ポート セレクターはこれらのブロックの最上部右隅にあります。]]></Description>
+      </Parameter>
+      <Parameter Name="Color" DisplayName="色">
+        <Description><![CDATA[<p><b>タイプ:</b> 数値<br/><b>備考:</b> 検出した色番号： <br/>0 = 色がありません <br/>1 = 黒 <br/>2 = 青 <br/>3 = 緑 <br/>4 = 黄 <br/>5 = 赤 <br/>6 = 白 <br/>7 = 茶</p>]]></Description>
+      </Parameter>
+      <Parameter Name="Value" DisplayName="照明">
+        <Description><![CDATA[<p><b>タイプ:</b> 数値<br/><b>備考:</b> 比較モードで使用したセンサー データ値</p>]]></Description>
+      </Parameter>
+      <Parameter Name="Comparison" DisplayName="比較タイプ">
+        <Description><![CDATA[<p><b>タイプ:</b> 数値<br/><b>可能な入力値:</b> 0 - 5<br/><b>備考:</b> 0:= (～と等しい)<br/>1:≠ (～と等しくありません)<br/>2:&gt; (～超過)<br/>3: ≥ (～以上)<br/>4:&lt; (～未満)<br/>5:≤ (～以下)</p>]]></Description>
+      </Parameter>
+      <Parameter Name="Threshold" DisplayName="しきい値">
+        <Description><![CDATA[<p><b>タイプ:</b> 数値<br/><b>可能な入力値:</b> 任意の数<br/><b>備考:</b> センサー データと比較する値</p>]]></Description>
+      </Parameter>
+      <Parameter Name="Result" DisplayName="比較結果">
+        <Description><![CDATA[<p><b>Type:</b> Logic<br/><b>Notes:</b> True/False result of a Compare mode.</p>]]></Description>
+      </Parameter>
+      <Parameter Name="CalibrateValueMin" DisplayName="値">
+        <Description><![CDATA[<p><b>タイプ:</b> 数値<br/><b>可能な入力値:</b> 0 - 100<br/><b>備考:</b> 調整モードでの光の強さ</p>]]></Description>
+      </Parameter>
+      <Parameter Name="CalibrateValueMax" DisplayName="値">
+        <Description><![CDATA[<p><b>タイプ:</b> 数値<br/><b>可能な入力値:</b> 0 - 100<br/><b>備考:</b> 調整モードでの光の強さ</p>]]></Description>
+      </Parameter>
+      <Parameter Name="Red" DisplayName="赤">
+        <Description><![CDATA[<p><b>タイプ:</b> 数値<br/><b>備考:</b> RGBモードで取得したRのデータ値</p>]]></Description>
+      </Parameter>
+      <Parameter Name="Green" DisplayName="緑">
+        <Description><![CDATA[<p><b>タイプ:</b> 数値<br/><b>備考:</b> RGBモードで取得したGのデータ値</p>]]></Description>
+      </Parameter>
+      <Parameter Name="Blue" DisplayName="青">
+        <Description><![CDATA[<p><b>タイプ:</b> 数値<br/><b>備考:</b> RGBモードで取得したBのデータ値</p>]]></Description>
+      </Parameter>
+      <Parameter Name="Red_Min" DisplayName="赤の下限値">
+        <Description><![CDATA[<p><b>タイプ:</b> 数値<br/><b>可能な入力値:</b> 0 - 1024<br/><b>備考:</b> 赤の下限値</p>]]></Description>
+      </Parameter>
+      <Parameter Name="Red_Max" DisplayName="赤の上限値">
+        <Description><![CDATA[<p><b>タイプ:</b> 数値<br/><b>可能な入力値:</b> 0 - 1024<br/><b>備考:</b> 赤の上限値</p>]]></Description>
+      </Parameter>
+      <Parameter Name="Green_Min" DisplayName="緑の下限値">
+        <Description><![CDATA[<p><b>タイプ:</b> 数値<br/><b>可能な入力値:</b> 0 - 1024<br/><b>備考:</b> 緑の下限値</p>]]></Description>
+      </Parameter>
+      <Parameter Name="Green_Max" DisplayName="緑の上限値">
+        <Description><![CDATA[<p><b>タイプ:</b> 数値<br/><b>可能な入力値:</b> 0 - 1024<br/><b>備考:</b> 緑の上限値</p>]]></Description>
+      </Parameter>
+      <Parameter Name="Blue_Min" DisplayName="青の下限値">
+        <Description><![CDATA[<p><b>タイプ:</b> 数値<br/><b>可能な入力値:</b> 0 - 1024<br/><b>備考:</b> 青の下限値</p>]]></Description>
+      </Parameter>
+      <Parameter Name="Blue_Max" DisplayName="青の上限値">
+        <Description><![CDATA[<p><b>タイプ:</b> 数値<br/><b>可能な入力値:</b> 0 - 1024<br/><b>備考:</b> 青の上限値</p>]]></Description>
+      </Parameter>
+      <Parameter Name="Color_Range" DisplayName="範囲">
+        <Description><![CDATA[<p><b>タイプ:</b> 論理値（Boolean）<br/><b>備考:</b> 範囲内を検出するか、範囲外を検出するかを指定します。<br/>True = 範囲内を検出、False = 範囲外を検出</p>]]></Description>
+      </Parameter>
+      <Block Mode="MeasureColor" DisplayName="色">
+        <Description><![CDATA[「測定 - 色」モードは、検出した色の色番号を出力します。]]></Description>
+      </Block>
+      <Block Mode="MeasureRawRGB" DisplayName="Raw RGB">
+        <Description><![CDATA[「測定 - RawRGB」モードは、検出した色のRGBを出力します。]]></Description>
+      </Block>
+      <Block Mode="MeasureReflectedLight" DisplayName="反射光の強さ">
+        <Description><![CDATA[「測定 - 反射光の強さ」モードにより、光の強さを照明に出力します。]]></Description>
+      </Block>
+      <Block Mode="MeasureAmbientLight" DisplayName="周辺の光の強さ">
+        <Description><![CDATA[「測定 - 周辺の光の強さ」モードにより、光の強さを照明に出力します。]]></Description>
+      </Block>
+      <Block Mode="CompareColor" DisplayName="色">
+        <Description><![CDATA[「比較 - 色」モードでは、色のセットで複数の色を選択することができます。検出した色が選択した色のいずれかと一致する場合、比較結果の出力は真となります。検出した色は色に出力されます。]]></Description>
+      </Block>
+      <Block Mode="CompareRawRGB" DisplayName="Raw RGB">
+        <Description><![CDATA[「比較 - RawRGB」モードでは、RGBの色の範囲を指定することができます。検出した色が指定した範囲に当てはまる場合、比較結果の出力は真となります。]]></Description>
+      </Block>
+      <Block Mode="CompareReflectedLight" DisplayName="反射光の強さ">
+        <Description><![CDATA[「比較 - 反射光の強さ」モードと「比較 - 周辺の光の強さ」モードにより、検出した光の強さを選択した比較タイプを用いてしきい値と比較します。真/偽の結果が比較結果に出力され、検出した光の強さが照明に出力されます。]]></Description>
+      </Block>
+      <Block Mode="CompareAmbientLight" DisplayName="周辺の光の強さ">
+        <Description><![CDATA[「比較 - 反射光の強さ」モードと「比較 - 周辺の光の強さ」モードにより、検出した光の強さを選択した比較タイプを用いてしきい値と比較します。真/偽の結果が比較結果に出力され、検出した光の強さが照明に出力されます。]]></Description>
+      </Block>
+      <Category Name="Calibrate" DisplayName="調整">
+        <Category Name="ReflectedLight" DisplayName="反射光の強さ">
+          <Block Mode="CalibrateMinColor" DisplayName="最小">
+            <Description><![CDATA[「調整 - 下限値」モードにより、値の入力で光の強さの下限値を指定することができます。調整後、カラー センサーがこの光の強さを 0 または指定された値として報告します。]]></Description>
+          </Block>
+          <Block Mode="CalibrateMaxColor" DisplayName="最大">
+            <Description><![CDATA[「調整 - 上限値」モードにより、値の入力で光の強さの上限値を指定することができます。調整後、カラー センサーがこの光の強さを 100 または指定された値として報告します。]]></Description>
+          </Block>
+          <Block Mode="CalibrateResetColor" DisplayName="リセット">
+            <Description><![CDATA[「調整 - リセット」モードによりカラー センサーの調整値を初期設定状態に戻します。]]></Description>
+          </Block>
+        </Category>
+      </Category>
+    </PolyGroup>
+  </PolyGroups>
+</EditorStrings>

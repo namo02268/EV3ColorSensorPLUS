@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definition>
+    <Entry Name="inside range" DisplayName="範囲内"/>
+    <Entry Name="outside range" DisplayName="範囲外"/>
+</Definition>

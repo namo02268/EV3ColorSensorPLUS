@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Definition>
+  <Entry Name="NoColor" DisplayName="色がありません " />
+  <Entry Name="Black" DisplayName="黒" />
+  <Entry Name="Blue" DisplayName="青" />
+  <Entry Name="Green" DisplayName="緑" />
+  <Entry Name="Yellow" DisplayName="黄" />
+  <Entry Name="Red" DisplayName="赤" />
+  <Entry Name="White" DisplayName="白" />
+  <Entry Name="Brown" DisplayName="茶" />
+</Definition>
