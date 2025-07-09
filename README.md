@@ -33,7 +33,7 @@ EV3標準ブロックでは取得できない生のRGB値を読み取れます�
 スイッチブロックやループブロックで色を使った分岐処理ができます。
 
 ## インストール方法
-- [Releases ページ](https://github.com/namo02268/EV3ColorPLUS/releases)よりColorSensorPLUS.ev3b をダウンロード
+- [Releases ページ](https://github.com/namo02268/EV3ColorSensorPLUS/releases)よりColorSensorPLUS.ev3b をダウンロード
 - EV3ソフトウェアを起動し、
 　[ツール] > [ブロック インポート] を開く
 - ダウンロードした .ev3b ファイルを読み込む
