@@ -1,4 +1,4 @@
-# EV3 ColorSensor PLUS ~EV3 Custom Programming Block~
+# EV3 ColorSensor PLUS
 ## 概要
 EV3 ColorSensor PLUS は、LEGO MINDSTORMS EV3 向けのカスタムプログラミングブロックです。EV3標準のカラーセンサーでは扱えない「生のRGBデータ取得」や「RGBの範囲による色検出」が可能で、色認識の幅を大きく広げます。
 
