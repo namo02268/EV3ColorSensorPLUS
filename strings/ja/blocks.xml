@@ -81,6 +81,45 @@
       <Block Mode="CompareAmbientLight" DisplayName="周辺の光の強さ">
         <Description><![CDATA[「比較 - 反射光の強さ」モードと「比較 - 周辺の光の強さ」モードにより、検出した光の強さを選択した比較タイプを用いてしきい値と比較します。真/偽の結果が比較結果に出力され、検出した光の強さが照明に出力されます。]]></Description>
       </Block>
+      <Block Mode="WaitColorSensorPLUSCompareColor" DisplayName="" Link="page.html?Path=blocks%2FLEGO%2FWait.html#Mode_WaitColorSensorCompareColor">
+        <Description><![CDATA[カラー センサーが 1 つ以上の特定の色を検知するまで待機することができます。例えば、カラー センサーが黒色を検知するまで待機することができます。カラー モードのカラー センサーに関する詳細については、カラー センサーを使用するをご確認ください。色のセットの入力で 1 つ以上の色を選択します。選択した色の一つが検知されるまで、このブロックは待機します。検知された色は、測定値に出力されます。]]></Description>
+      </Block>
+      <Block Mode="WaitColorSensorPLUSCompareRawRGB" DisplayName="">
+        <Description><![CDATA[<p><b>モード:</b> カラー センサー - 比較 - RawRGB<br/><b>使用例:</b> 指定したRGBの範囲の色を検知するまで待機します。</p>]]></Description>
+      </Block>
+      <Block Mode="WaitColorSensorPLUSCompareReflectedLight" DisplayName="" Link="page.html?Path=editor%2FUsingSensors_Color.html#Mode_WaitColorSensorCompareReflectedLight">
+        <Description><![CDATA[<p><b>モード:</b> カラー センサー - 比較 - 反射光の強さ<br/><b>使用例:</b> 反射光の強さが一定の値に到達するまで待機します。</p>]]></Description>
+      </Block>
+      <Block Mode="WaitColorSensorPLUSCompareAmbientLight" DisplayName="" Link="page.html?Path=editor%2FUsingSensors_Color.html#Mode_WaitColorSensorCompareAmbientLight">
+        <Description><![CDATA[<p><b>モード:</b> カラー センサー - 比較 - 周辺の光の強さ<br/><b>使用例:</b> 周辺の光の強さが一定の値に到達するまで待機します。</p>]]></Description>
+      </Block>
+      <Block Mode="LoopColorSensorPLUSCompareColor" DisplayName="" Link="page.html?Path=blocks%2FLEGO%2FLoopCondition.html#Mode_LoopColorSensorCompareColor">
+        <Description><![CDATA[<p><b>備考:</b> 選択した色の一つが検知されるまで、ループが繰り返されます。 <br/><br/>カラー センサーを使用するをご確認ください。</p>]]></Description>
+      </Block>
+      <Block Mode="LoopColorSensorPLUSCompareRawRGB" DisplayName="">
+        <Description><![CDATA[<p><b>モード:</b> カラー センサー - RawRGB<br/><b>使用例:</b> 指定したRGBの範囲の色を検知するまで、ブロックのシーケンスを繰り返します。</p>]]></Description>
+      </Block>
+      <Block Mode="LoopColorSensorPLUSCompareReflectedLight" DisplayName="" Link="page.html?Path=editor%2FUsingSensors_Color.html#Mode_LoopColorSensorCompareReflectedLight">
+        <Description><![CDATA[<p><b>モード:</b> カラー センサー - 反射光の強さ<br/><b>使用例:</b> 反射光の強さが一定の値に到達するまで、ブロックのシーケンスを繰り返します。</p>]]></Description>
+      </Block>
+      <Block Mode="LoopColorSensorPLUSCompareAmbientLight" DisplayName="" Link="page.html?Path=editor%2FUsingSensors_Color.html#Mode_LoopColorSensorCompareAmbientLight">
+        <Description><![CDATA[<p><b>モード:</b> カラー センサー - 周辺の光の強さ<br/><b>使用例:</b> 周辺の光の強さが一定の値に到達するまで、ブロックのシーケンスを繰り返します。</p>]]></Description>
+      </Block>
+      <Block Mode="SwitchColorSensorPLUSMeasureColor" DisplayName="" Link="page.html?Path=blocks%2FLEGO%2FCaseSelector.html#Mode_SwitchColorSensorMeasureColor">
+        <Description><![CDATA[<p><b>使用例:</b> 検知された色に応じて 2 つ以上の条件を選択します。<br/><b>参照:</b> カラー センサーを使用する</p>]]></Description>
+      </Block>
+      <Block Mode="SwitchColorSensorPLUSCompareColor" DisplayName="" Link="page.html?Path=blocks%2FLEGO%2FCaseSelector.html#Mode_SwitchColorSensorCompareColor">
+        <Description><![CDATA[<p><b>使用例:</b> 選択した色の一つが検知されたかどうかによって 2 つ以上の条件を選択します。<br/><b>参照:</b> カラー センサーを使用する</p>]]></Description>
+      </Block>
+      <Block Mode="SwitchColorSensorPLUSCompareRawRGB" DisplayName="">
+        <Description><![CDATA[<p><b>モード:</b> カラー センサー - 比較 - RawRGB<br/><b>使用例:</b> 指定したRGB値の範囲に入っているかどうかで、2つのブロックのシーケンスから選択します。</p>]]></Description>
+      </Block>
+      <Block Mode="SwitchColorSensorPLUSCompareReflectedLight" DisplayName="" Link="page.html?Path=editor%2FUsingSensors_Color.html#Mode_SwitchColorSensorCompareReflectedLight">
+       <Description><![CDATA[<p><b>モード:</b> カラー センサー - 比較 - 反射光の強さ<br/><b>使用例:</b> 反射光の強さに応じて 2 つのブロックのシーケンスから選択します。</p>]]></Description>
+      </Block>
+      <Block Mode="SwitchColorSensorPLUSCompareAmbientLight" DisplayName="" Link="page.html?Path=editor%2FUsingSensors_Color.html#Mode_SwitchColorSensorCompareAmbientLight">
+       <Description><![CDATA[<p><b>モード:</b> カラー センサー - 比較 - 周辺の光の強さ<br/><b>使用例:</b> 周辺の光の強さに応じて 2 つのブロックのシーケンスから選択します。</p>]]></Description>
+      </Block>
       <Category Name="Calibrate" DisplayName="調整">
         <Category Name="ReflectedLight" DisplayName="反射光の強さ">
           <Block Mode="CalibrateMinColor" DisplayName="最小">

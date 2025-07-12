@@ -109,7 +109,7 @@
         <ParameterReference Name="Result" />
         <ParameterReference Name="Value" />
         <BlockInterface>Compare</BlockInterface>
-        <Flags></Flags>
+        <Flags>PBROnly</Flags>
       </Block>
       <Block>
         <Mode>CompareAmbientLight</Mode>
@@ -120,7 +120,7 @@
         <ParameterReference Name="Result" />
         <ParameterReference Name="Value" />
         <BlockInterface>Compare</BlockInterface>
-        <Flags></Flags>
+        <Flags>PBROnly</Flags>
       </Block>
       <Category Name="Calibrate">
         <Category Name="ReflectedLight">

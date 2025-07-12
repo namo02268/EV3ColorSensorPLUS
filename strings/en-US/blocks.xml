@@ -2,7 +2,7 @@
 <EditorStrings>
   <PolyGroups ModuleName="ColorSensorPLUS">
     <PolyGroup Name="ColorSensorPLUS" DisplayName="Color Sensor PLUS">
-      <Description><![CDATA[<p>Context help for PolyGroup <b>Color Sensor</b></p>]]></Description>
+      <Description><![CDATA[<p>Context help for PolyGroup <b>Color Sensor PLUS</b></p>]]></Description>
 
       <Parameter Name="Port" DisplayName="Port" Link="page.html?Path=editor%2FPortSelector.html#Port">
         <Description><![CDATA[Many programming blocks require that you select the ports on the EV3 Brick (A, B, C, D, 1, 2, 3, and 4) that these blocks will use. The Port Selectors are in the top right-hand corner of these blocks.]]></Description>
@@ -81,6 +81,47 @@
       </Block>
       <Block Mode="CompareAmbientLight" DisplayName="Ambient Light Intensity">
         <Description><![CDATA[The Compare – Reflected Light Intensity and Compare – Ambient Light Intensity modes compare the detected light intensity to the Threshold Value using the selected Compare Type. The True/False result is output in Compare Result, and the detected light intensity is output in Measured Value.]]></Description>
+      </Block>
+      <Block Mode="WaitColorSensorPLUSCompareColor" DisplayName="" Link="page.html?Path=blocks%2FLEGO%2FWait.html#Mode_WaitColorSensorCompareColor">
+        <Description><![CDATA[You can wait for the Color Sensor to detect one or more specified colors. For example, you could wait for the Color Sensor to detect black. See Using the Color Sensor for more information about the Color Sensor in Color mode.Select one or more colors in the Set of Colors input. The block will wait until any one of the selected colors is detected. The detected color is output in Measured Value.]]></Description>
+      </Block>
+      <Block Mode="WaitColorSensorPLUSCompareRawRGB" DisplayName="" Link="page.html?Path=editor%2FUsingSensors_Color.html#Mode_WaitColorSensorCompareReflectedLight">
+        <Description><![CDATA[<p><b>Mode:</b> Color Sensor - Compare - Raw RGB<br/><b>Use:</b> Waits until a color within the specified RGB range is detected.</p>]]></Description>
+      </Block>
+      <Block Mode="WaitColorSensorPLUSCompareReflectedLight" DisplayName="" Link="page.html?Path=editor%2FUsingSensors_Color.html#Mode_WaitColorSensorCompareReflectedLight">
+        <Description><![CDATA[<p><b>Mode:</b> Color Sensor - Compare - Reflected Light Intensity<br/><b>Use:</b> Wait for the reflected light intensity to reach a certain value.</p>]]></Description>
+      </Block>
+      <Block Mode="WaitColorSensorPLUSCompareAmbientLight" DisplayName="" Link="page.html?Path=editor%2FUsingSensors_Color.html#Mode_WaitColorSensorCompareAmbientLight">
+        <Description><![CDATA[<p><b>Mode:</b> Color Sensor - Compare - Ambient Light Intensity<br/><b>Use:</b> Wait for the ambient light intensity to reach a certain value.</p>]]></Description>
+      </Block>
+      <Block Mode="LoopColorSensorPLUSCompareColor" DisplayName="" Link="page.html?Path=blocks%2FLEGO%2FLoopCondition.html#Mode_LoopColorSensorCompareColor">
+        <Description><![CDATA[<p><b>Notes:</b> Loop repeats until one of the selected colors is detected. <br/><br/>See Using the Color Sensor.</p>]]></Description>
+      </Block>
+      <Block Mode="LoopColorSensorPLUSCompareRawRGB" DisplayName="">
+        <Description><![CDATA[<p><b>Mode:</b> Color Sensor - RawRGB<br/><b>Use:</b> Repeat a sequence of blocks until a color within the specified Raw RGB range is detected.</p>
+        ]]></Description>
+      </Block>
+      <Block Mode="LoopColorSensorPLUSCompareReflectedLight" DisplayName="" Link="page.html?Path=editor%2FUsingSensors_Color.html#Mode_LoopColorSensorCompareReflectedLight">
+        <Description><![CDATA[<p><b>Mode:</b> Color Sensor - Reflected Light Intensity<br/><b>Use:</b> Repeat a sequence of blocks until the reflected light intensity reaches a certain value.</p>]]></Description>
+      </Block>
+      <Block Mode="LoopColorSensorPLUSCompareAmbientLight" DisplayName="" Link="page.html?Path=editor%2FUsingSensors_Color.html#Mode_LoopColorSensorCompareAmbientLight">
+        <Description><![CDATA[<p><b>Mode:</b> Color Sensor - Ambient Light Intensity<br/><b>Use:</b> Repeat a sequence of blocks until the ambient light intensity reaches a certain value.</p>]]></Description>
+      </Block>
+      <Block Mode="SwitchColorSensorPLUSMeasureColor" DisplayName="" Link="page.html?Path=blocks%2FLEGO%2FCaseSelector.html#Mode_SwitchColorSensorMeasureColor">
+        <Description><![CDATA[<p><b>Use:</b> Choose between two or more Cases depending on which color is detected.<br/><b>See:</b> Using the Color Sensor</p>]]></Description>
+      </Block>
+      <Block Mode="SwitchColorSensorPLUSCompareColor" DisplayName="" Link="page.html?Path=blocks%2FLEGO%2FCaseSelector.html#Mode_SwitchColorSensorCompareColor">
+        <Description><![CDATA[<p><b>Use:</b> Choose between two Cases depending on whether or not one of the selected colors is detected<br/><b>See:</b> Using the Color Sensor</p>]]></Description>
+      </Block>
+      <Block Mode="SwitchColorSensorPLUSCompareRawRGB" DisplayName="">
+        <Description><![CDATA[<p><b>Mode:</b> Color Sensor - Compare - RawRGB<br/><b>Use:</b> Choose between two sequences of blocks depending on whether the detected Raw RGB value falls within a specified range.</p>
+        ]]></Description>
+      </Block>
+      <Block Mode="SwitchColorSensorPLUSCompareReflectedLight" DisplayName="" Link="page.html?Path=editor%2FUsingSensors_Color.html#Mode_SwitchColorSensorCompareReflectedLight">
+       <Description><![CDATA[<p><b>Mode:</b> Color Sensor - Compare - Reflected Light Intensity<br/><b>Use:</b> Choose between two sequences of blocks depending on the reflected light intensity.</p>]]></Description>
+      </Block>
+      <Block Mode="SwitchColorSensorPLUSCompareAmbientLight" DisplayName="" Link="page.html?Path=editor%2FUsingSensors_Color.html#Mode_SwitchColorSensorCompareAmbientLight">
+       <Description><![CDATA[<p><b>Mode:</b> Color Sensor - Compare - Ambient Light Intensity<br/><b>Use:</b> Choose between two sequences of blocks depending on the ambient light intensity.</p>]]></Description>
       </Block>
       <Category Name="Calibrate" DisplayName="Calibrate">
         <Category Name="ReflectedLight" DisplayName="Reflected Light Intensity">
