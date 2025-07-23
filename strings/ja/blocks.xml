@@ -84,6 +84,9 @@
       <Block Mode="CompareReflectedLight" DisplayName="反射光の強さ">
         <Description><![CDATA[「比較 - 反射光の強さ」モードと「比較 - 周辺の光の強さ」モードにより、検出した光の強さを選択した比較タイプを用いてしきい値と比較します。真/偽の結果が比較結果に出力され、検出した光の強さが照明に出力されます。]]></Description>
       </Block>
+      <Block Mode="CompareRawReflectedLight" DisplayName="生の反射光の強さ">
+        <Description><![CDATA[「比較 - 生の反射光の強さ」モードにより、検出した光の強さを選択した比較タイプを用いてしきい値と比較します。真/偽の結果が比較結果に出力され、検出した光の強さが照明に出力されます。]]></Description>
+      </Block>
       <Block Mode="CompareAmbientLight" DisplayName="周辺の光の強さ">
         <Description><![CDATA[「比較 - 反射光の強さ」モードと「比較 - 周辺の光の強さ」モードにより、検出した光の強さを選択した比較タイプを用いてしきい値と比較します。真/偽の結果が比較結果に出力され、検出した光の強さが照明に出力されます。]]></Description>
       </Block>
