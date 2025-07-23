@@ -37,7 +37,7 @@
       </Hardware>
       <Block>
         <Mode>MeasureColor</Mode>
-        <Reference Type="VILib" Name="ColorValue_PLUS.vix" />
+        <Reference Type="VILib" Name="ColorPLUSValue.vix" />
         <ParameterReference Name="Port" />
         <ParameterReference Name="Color" />
         <PaletteInfo Weight="0.5" />
@@ -46,8 +46,8 @@
         <Hardware></Hardware>
       </Block>
       <Block>
-        <Mode>MeasureRawRGB</Mode>
-        <Reference Type="VILib" Name="RawRGB_PLUS.vix" />
+        <Mode>MeasureRGB</Mode>
+        <Reference Type="VILib" Name="ColorPLUSRGB.vix" />
         <ParameterReference Name="Port" />
         <ParameterReference Name="Red" />
         <ParameterReference Name="Green" />
@@ -58,7 +58,16 @@
       </Block>
       <Block>
         <Mode>MeasureReflectedLight</Mode>
-        <Reference Type="VILib" Name="ColorReflectedIntensity_PLUS.vix" />
+        <Reference Type="VILib" Name="ColorPLUSReflectedIntensity.vix" />
+        <ParameterReference Name="Port" />
+        <ParameterReference Name="Value" />
+        <BlockInterface>Measure</BlockInterface>
+        <Flags>PBROnly</Flags>
+        <Hardware></Hardware>
+      </Block>
+      <Block>
+        <Mode>MeasureRawReflectedLight</Mode>
+        <Reference Type="VILib" Name="ColorPLUSRawReflectedIntensity.vix" />
         <ParameterReference Name="Port" />
         <ParameterReference Name="Value" />
         <BlockInterface>Measure</BlockInterface>
@@ -67,7 +76,7 @@
       </Block>
       <Block>
         <Mode>MeasureAmbientLight</Mode>
-        <Reference Type="VILib" Name="ColorAmbientIntensity_PLUS.vix" />
+        <Reference Type="VILib" Name="ColorPLUSAmbientIntensity.vix" />
         <ParameterReference Name="Port" />
         <ParameterReference Name="Value" />
         <BlockInterface>Measure</BlockInterface>
@@ -76,7 +85,7 @@
       </Block>
       <Block>
         <Mode>CompareColor</Mode>
-        <Reference Type="VILib" Name="ColorCompare_PLUS.vix" />
+        <Reference Type="VILib" Name="ColorPLUSCompare.vix" />
         <ParameterReference Name="Port" />
         <ParamInfo Name="Set of colors" Direction="Input" Configuration="Identification_Color.xml" Identification="Identification_Color.xml" DataType="Single[]" DefaultValue="[5]" />
         <ParameterReference Name="Result" />
@@ -85,8 +94,8 @@
         <Flags>PBROnly</Flags>
       </Block>
       <Block>
-        <Mode>CompareRawRGB</Mode>
-        <Reference Type="VILib" Name="RawRGBCompare_PLUS.vix" />
+        <Mode>CompareRGB</Mode>
+        <Reference Type="VILib" Name="ColorPLUSRGBCompare.vix" />
         <ParameterReference Name="Port" />
         <ParameterReference Name="Red_Min" />
         <ParameterReference Name="Red_Max" />
@@ -102,7 +111,18 @@
       </Block>
       <Block>
         <Mode>CompareReflectedLight</Mode>
-        <Reference Type="VILib" Name="ColorReflectedIntensityCompare_PLUS.vix" />
+        <Reference Type="VILib" Name="ColorPLUSReflectedIntensityCompare.vix" />
+        <ParameterReference Name="Port" />
+        <ParameterReference Name="Comparison" />
+        <ParameterReference Name="Threshold" />
+        <ParameterReference Name="Result" />
+        <ParameterReference Name="Value" />
+        <BlockInterface>Compare</BlockInterface>
+        <Flags>PBROnly</Flags>
+      </Block>
+      <Block>
+        <Mode>CompareRawReflectedLight</Mode>
+        <Reference Type="VILib" Name="ColorPLUSRawReflectedIntensityCompare.vix" />
         <ParameterReference Name="Port" />
         <ParameterReference Name="Comparison" />
         <ParameterReference Name="Threshold" />
@@ -113,7 +133,7 @@
       </Block>
       <Block>
         <Mode>CompareAmbientLight</Mode>
-        <Reference Type="VILib" Name="ColorAmbientIntensityCompare_PLUS.vix" />
+        <Reference Type="VILib" Name="ColorPLUSAmbientIntensityCompare.vix" />
         <ParameterReference Name="Port" />
         <ParameterReference Name="Comparison" />
         <ParameterReference Name="Threshold" />
@@ -126,21 +146,21 @@
         <Category Name="ReflectedLight">
           <Block>
             <Mode>CalibrateMinColor</Mode>
-            <Reference Type="VILib" Name="ColorCalibrateMin_PLUS.vix" />
+            <Reference Type="VILib" Name="ColorPLUSCalibrateMin.vix" />
             <ParameterReference Name="CalibrateValueMin" />
             <Hardware>NxtLight</Hardware>
             <Flags>PBROnly</Flags>
           </Block>
           <Block>
             <Mode>CalibrateMaxColor</Mode>
-            <Reference Type="VILib" Name="ColorCalibrateMax_PLUS.vix" />
+            <Reference Type="VILib" Name="ColorPLUSCalibrateMax.vix" />
             <ParameterReference Name="CalibrateValueMax" />
             <Hardware>NxtLight</Hardware>
             <Flags>PBROnly</Flags>
           </Block>
           <Block>
             <Mode>CalibrateResetColor</Mode>
-            <Reference Type="VILib" Name="ColorCalibrateDefault_PLUS.vix" />
+            <Reference Type="VILib" Name="ColorPLUSCalibrateDefault.vix" />
             <Hardware>NxtLight</Hardware>
             <Flags>PBROnly</Flags>
           </Block>

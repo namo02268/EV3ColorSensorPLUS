@@ -10,6 +10,9 @@
       <Parameter Name="Color" DisplayName="Color">
         <Description><![CDATA[<p><b>Type:</b> Numeric<br/><b>Notes:</b> Detected color number: <br/>0 = No Color <br/>1 = Black <br/>2 = Blue <br/>3 = Green <br/>4 = Yellow <br/>5 = Red <br/>6 = White <br/>7 = Brown</p>]]></Description>
       </Parameter>
+      <Parameter Name="Set of colors" DisplayName="Set of Colors">
+        <Description><![CDATA[<p><b>Type:</b> Numeric Array<br/><b>Allowed Values:</b> Each element: 0 – 7<br/><b>Notes:</b> Selected color(s) to test for in Compare – Color mode:<br/>0 = No Color <br/>1 = Black <br/>2 = Blue <br/>3 = Green <br/>4 = Yellow <br/>5 = Red <br/>6 = White <br/>7 = Brown</p>]]></Description>
+      </Parameter>
       <Parameter Name="Value" DisplayName="Light">
         <Description><![CDATA[<p><b>Type:</b> Numeric<br/><b>Notes:</b> The sensor data value used for a Compare mode.</p>]]></Description>
       </Parameter>
@@ -29,13 +32,13 @@
         <Description><![CDATA[<p><b>Type:</b> Numeric<br/><b>Allowed Values:</b> 0 – 100<br/><b>Notes:</b> Light intensity for Calibrate modes</p>]]></Description>
       </Parameter>
       <Parameter Name="Red" DisplayName="Red">
-        <Description><![CDATA[<p><b>Type:</b> Numeric<br/><b>Notes:</b> Red component value obtained in Raw RGB mode.</p>]]></Description>
+        <Description><![CDATA[<p><b>Type:</b> Numeric<br/><b>Notes:</b> Red component value obtained in RGB mode.</p>]]></Description>
       </Parameter>
       <Parameter Name="Green" DisplayName="Green">
-        <Description><![CDATA[<p><b>Type:</b> Numeric<br/><b>Notes:</b> Green component value obtained in Raw RGB mode.</p>]]></Description>
+        <Description><![CDATA[<p><b>Type:</b> Numeric<br/><b>Notes:</b> Green component value obtained in RGB mode.</p>]]></Description>
       </Parameter>
       <Parameter Name="Blue" DisplayName="Blue">
-        <Description><![CDATA[<p><b>Type:</b> Numeric<br/><b>Notes:</b> Blue component value obtained in Raw RGB mode.</p>]]></Description>
+        <Description><![CDATA[<p><b>Type:</b> Numeric<br/><b>Notes:</b> Blue component value obtained in RGB mode.</p>]]></Description>
       </Parameter>
       <Parameter Name="Red_Min" DisplayName="Red Minimum">
         <Description><![CDATA[<p><b>Type:</b> Numeric<br/><b>Allowed Values:</b> 0 – 1024<br/><b>Notes:</b> Minimum value for red in RGB range comparison.</p>]]></Description>
@@ -61,11 +64,14 @@
       <Block Mode="MeasureColor" DisplayName="Color">
         <Description><![CDATA[The Measure - Color mode outputs the detected color number in  Color.]]></Description>
       </Block>
-      <Block Mode="MeasureRawRGB" DisplayName="Raw RGB">
-        <Description><![CDATA[The Measure – Raw RGB mode outputs the raw red, green, and blue values detected by the sensor. These values can be used for custom color processing or analysis.]]></Description>
+      <Block Mode="MeasureRGB" DisplayName="RGB">
+        <Description><![CDATA[The Measure – RGB mode outputs the red, green, and blue values detected by the sensor. These values can be used for custom color processing or analysis.]]></Description>
       </Block>
       <Block Mode="MeasureReflectedLight" DisplayName="Reflected Light Intensity">
         <Description><![CDATA[The Measure - Reflected Light Intensity mode outputs the light intensity in Measured Value.]]></Description>
+      </Block>
+      <Block Mode="MeasureRawReflectedLight" DisplayName="Raw Reflected Light Intensity">
+        <Description><![CDATA[The Measure - Raw Reflected Light Intensity mode outputs the unprocessed reflected light intensity value.]]></Description>
       </Block>
       <Block Mode="MeasureAmbientLight" DisplayName="Ambient Light Intensity">
         <Description><![CDATA[The Measure - Ambient Light Intensity mode outputs the light intensity in Measured Value.]]></Description>
@@ -73,8 +79,8 @@
       <Block Mode="CompareColor" DisplayName="Color">
         <Description><![CDATA[In the Compare - Color mode, you can select one or more colors in the Set of Colors. The Compare Result output will be True if the detected color matches any of the selected colors. The detected color is output to Measured Value.]]></Description>
       </Block>
-      <Block Mode="CompareRawRGB" DisplayName="Raw RGB">
-        <Description><![CDATA[The Compare – Raw RGB mode checks whether the detected red, green, and blue values fall within the specified RGB range. The result is output as True if the values are within range, or False if they are outside.]]></Description>
+      <Block Mode="CompareRGB" DisplayName="RGB">
+        <Description><![CDATA[The Compare – RGB mode checks whether the detected red, green, and blue values fall within the specified RGB range. The result is output as True if the values are within range, or False if they are outside.]]></Description>
       </Block>
       <Block Mode="CompareReflectedLight" DisplayName="Reflected Light Intensity">
         <Description><![CDATA[The Compare – Reflected Light Intensity and Compare – Ambient Light Intensity modes compare the detected light intensity to the Threshold Value using the selected Compare Type. The True/False result is output in Compare Result, and the detected light intensity is output in Measured Value.]]></Description>
@@ -85,8 +91,8 @@
       <Block Mode="WaitColorSensorPLUSCompareColor" DisplayName="" Link="page.html?Path=blocks%2FLEGO%2FWait.html#Mode_WaitColorSensorCompareColor">
         <Description><![CDATA[You can wait for the Color Sensor to detect one or more specified colors. For example, you could wait for the Color Sensor to detect black. See Using the Color Sensor for more information about the Color Sensor in Color mode.Select one or more colors in the Set of Colors input. The block will wait until any one of the selected colors is detected. The detected color is output in Measured Value.]]></Description>
       </Block>
-      <Block Mode="WaitColorSensorPLUSCompareRawRGB" DisplayName="" Link="page.html?Path=editor%2FUsingSensors_Color.html#Mode_WaitColorSensorCompareReflectedLight">
-        <Description><![CDATA[<p><b>Mode:</b> Color Sensor - Compare - Raw RGB<br/><b>Use:</b> Waits until a color within the specified RGB range is detected.</p>]]></Description>
+      <Block Mode="WaitColorSensorPLUSCompareRGB" DisplayName="" Link="page.html?Path=editor%2FUsingSensors_Color.html#Mode_WaitColorSensorCompareReflectedLight">
+        <Description><![CDATA[<p><b>Mode:</b> Color Sensor - Compare - RGB<br/><b>Use:</b> Waits until a color within the specified RGB range is detected.</p>]]></Description>
       </Block>
       <Block Mode="WaitColorSensorPLUSCompareReflectedLight" DisplayName="" Link="page.html?Path=editor%2FUsingSensors_Color.html#Mode_WaitColorSensorCompareReflectedLight">
         <Description><![CDATA[<p><b>Mode:</b> Color Sensor - Compare - Reflected Light Intensity<br/><b>Use:</b> Wait for the reflected light intensity to reach a certain value.</p>]]></Description>
@@ -97,8 +103,8 @@
       <Block Mode="LoopColorSensorPLUSCompareColor" DisplayName="" Link="page.html?Path=blocks%2FLEGO%2FLoopCondition.html#Mode_LoopColorSensorCompareColor">
         <Description><![CDATA[<p><b>Notes:</b> Loop repeats until one of the selected colors is detected. <br/><br/>See Using the Color Sensor.</p>]]></Description>
       </Block>
-      <Block Mode="LoopColorSensorPLUSCompareRawRGB" DisplayName="">
-        <Description><![CDATA[<p><b>Mode:</b> Color Sensor - RawRGB<br/><b>Use:</b> Repeat a sequence of blocks until a color within the specified Raw RGB range is detected.</p>
+      <Block Mode="LoopColorSensorPLUSCompareRGB" DisplayName="">
+        <Description><![CDATA[<p><b>Mode:</b> Color Sensor - RGB<br/><b>Use:</b> Repeat a sequence of blocks until a color within the specified RGB range is detected.</p>
         ]]></Description>
       </Block>
       <Block Mode="LoopColorSensorPLUSCompareReflectedLight" DisplayName="" Link="page.html?Path=editor%2FUsingSensors_Color.html#Mode_LoopColorSensorCompareReflectedLight">
@@ -113,8 +119,8 @@
       <Block Mode="SwitchColorSensorPLUSCompareColor" DisplayName="" Link="page.html?Path=blocks%2FLEGO%2FCaseSelector.html#Mode_SwitchColorSensorCompareColor">
         <Description><![CDATA[<p><b>Use:</b> Choose between two Cases depending on whether or not one of the selected colors is detected<br/><b>See:</b> Using the Color Sensor</p>]]></Description>
       </Block>
-      <Block Mode="SwitchColorSensorPLUSCompareRawRGB" DisplayName="">
-        <Description><![CDATA[<p><b>Mode:</b> Color Sensor - Compare - RawRGB<br/><b>Use:</b> Choose between two sequences of blocks depending on whether the detected Raw RGB value falls within a specified range.</p>
+      <Block Mode="SwitchColorSensorPLUSCompareRGB" DisplayName="">
+        <Description><![CDATA[<p><b>Mode:</b> Color Sensor - Compare - RGB<br/><b>Use:</b> Choose between two sequences of blocks depending on whether the detected RGB value falls within a specified range.</p>
         ]]></Description>
       </Block>
       <Block Mode="SwitchColorSensorPLUSCompareReflectedLight" DisplayName="" Link="page.html?Path=editor%2FUsingSensors_Color.html#Mode_SwitchColorSensorCompareReflectedLight">

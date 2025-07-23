@@ -9,6 +9,9 @@
       <Parameter Name="Color" DisplayName="色">
         <Description><![CDATA[<p><b>タイプ:</b> 数値<br/><b>備考:</b> 検出した色番号： <br/>0 = 色がありません <br/>1 = 黒 <br/>2 = 青 <br/>3 = 緑 <br/>4 = 黄 <br/>5 = 赤 <br/>6 = 白 <br/>7 = 茶</p>]]></Description>
       </Parameter>
+      <Parameter Name="Set of colors" DisplayName="色のセット">
+        <Description><![CDATA[<p><b>タイプ:</b> 数値配列<br/><b>可能な入力値:</b> 各要素：0 – 7<br/><b>備考:</b> 「比較 - 色」モードでテストする選択した色：<br/>0 = 色がありません <br/>1 = 黒 <br/>2 = 青 <br/>3 = 緑 <br/>4 = 黄 <br/>5 = 赤 <br/>6 = 白 <br/>7 = 茶</p>]]></Description>
+      </Parameter>
       <Parameter Name="Value" DisplayName="照明">
         <Description><![CDATA[<p><b>タイプ:</b> 数値<br/><b>備考:</b> 比較モードで使用したセンサー データ値</p>]]></Description>
       </Parameter>
@@ -60,11 +63,14 @@
       <Block Mode="MeasureColor" DisplayName="色">
         <Description><![CDATA[「測定 - 色」モードは、検出した色の色番号を出力します。]]></Description>
       </Block>
-      <Block Mode="MeasureRawRGB" DisplayName="Raw RGB">
-        <Description><![CDATA[「測定 - RawRGB」モードは、検出した色のRGBを出力します。]]></Description>
+      <Block Mode="MeasureRGB" DisplayName="RGB">
+        <Description><![CDATA[「測定 - RGB」モードは、検出した色のRGBを出力します。]]></Description>
       </Block>
       <Block Mode="MeasureReflectedLight" DisplayName="反射光の強さ">
         <Description><![CDATA[「測定 - 反射光の強さ」モードにより、光の強さを照明に出力します。]]></Description>
+      </Block>
+      <Block Mode="MeasureRawReflectedLight" DisplayName="生の反射光の強さ">
+        <Description><![CDATA[「測定 - 生の反射光の強さ」モードにより、生の光の強さを照明に出力します。]]></Description>
       </Block>
       <Block Mode="MeasureAmbientLight" DisplayName="周辺の光の強さ">
         <Description><![CDATA[「測定 - 周辺の光の強さ」モードにより、光の強さを照明に出力します。]]></Description>
@@ -72,8 +78,8 @@
       <Block Mode="CompareColor" DisplayName="色">
         <Description><![CDATA[「比較 - 色」モードでは、色のセットで複数の色を選択することができます。検出した色が選択した色のいずれかと一致する場合、比較結果の出力は真となります。検出した色は色に出力されます。]]></Description>
       </Block>
-      <Block Mode="CompareRawRGB" DisplayName="Raw RGB">
-        <Description><![CDATA[「比較 - RawRGB」モードでは、RGBの色の範囲を指定することができます。検出した色が指定した範囲に当てはまる場合、比較結果の出力は真となります。]]></Description>
+      <Block Mode="CompareRGB" DisplayName="RGB">
+        <Description><![CDATA[「比較 - RGB」モードでは、RGBの色の範囲を指定することができます。検出した色が指定した範囲に当てはまる場合、比較結果の出力は真となります。]]></Description>
       </Block>
       <Block Mode="CompareReflectedLight" DisplayName="反射光の強さ">
         <Description><![CDATA[「比較 - 反射光の強さ」モードと「比較 - 周辺の光の強さ」モードにより、検出した光の強さを選択した比較タイプを用いてしきい値と比較します。真/偽の結果が比較結果に出力され、検出した光の強さが照明に出力されます。]]></Description>
@@ -84,8 +90,8 @@
       <Block Mode="WaitColorSensorPLUSCompareColor" DisplayName="" Link="page.html?Path=blocks%2FLEGO%2FWait.html#Mode_WaitColorSensorCompareColor">
         <Description><![CDATA[カラー センサーが 1 つ以上の特定の色を検知するまで待機することができます。例えば、カラー センサーが黒色を検知するまで待機することができます。カラー モードのカラー センサーに関する詳細については、カラー センサーを使用するをご確認ください。色のセットの入力で 1 つ以上の色を選択します。選択した色の一つが検知されるまで、このブロックは待機します。検知された色は、測定値に出力されます。]]></Description>
       </Block>
-      <Block Mode="WaitColorSensorPLUSCompareRawRGB" DisplayName="">
-        <Description><![CDATA[<p><b>モード:</b> カラー センサー - 比較 - RawRGB<br/><b>使用例:</b> 指定したRGBの範囲の色を検知するまで待機します。</p>]]></Description>
+      <Block Mode="WaitColorSensorPLUSCompareRGB" DisplayName="">
+        <Description><![CDATA[<p><b>モード:</b> カラー センサー - 比較 - RGB<br/><b>使用例:</b> 指定したRGBの範囲の色を検知するまで待機します。</p>]]></Description>
       </Block>
       <Block Mode="WaitColorSensorPLUSCompareReflectedLight" DisplayName="" Link="page.html?Path=editor%2FUsingSensors_Color.html#Mode_WaitColorSensorCompareReflectedLight">
         <Description><![CDATA[<p><b>モード:</b> カラー センサー - 比較 - 反射光の強さ<br/><b>使用例:</b> 反射光の強さが一定の値に到達するまで待機します。</p>]]></Description>
@@ -96,8 +102,8 @@
       <Block Mode="LoopColorSensorPLUSCompareColor" DisplayName="" Link="page.html?Path=blocks%2FLEGO%2FLoopCondition.html#Mode_LoopColorSensorCompareColor">
         <Description><![CDATA[<p><b>備考:</b> 選択した色の一つが検知されるまで、ループが繰り返されます。 <br/><br/>カラー センサーを使用するをご確認ください。</p>]]></Description>
       </Block>
-      <Block Mode="LoopColorSensorPLUSCompareRawRGB" DisplayName="">
-        <Description><![CDATA[<p><b>モード:</b> カラー センサー - RawRGB<br/><b>使用例:</b> 指定したRGBの範囲の色を検知するまで、ブロックのシーケンスを繰り返します。</p>]]></Description>
+      <Block Mode="LoopColorSensorPLUSCompareRGB" DisplayName="">
+        <Description><![CDATA[<p><b>モード:</b> カラー センサー - RGB<br/><b>使用例:</b> 指定したRGBの範囲の色を検知するまで、ブロックのシーケンスを繰り返します。</p>]]></Description>
       </Block>
       <Block Mode="LoopColorSensorPLUSCompareReflectedLight" DisplayName="" Link="page.html?Path=editor%2FUsingSensors_Color.html#Mode_LoopColorSensorCompareReflectedLight">
         <Description><![CDATA[<p><b>モード:</b> カラー センサー - 反射光の強さ<br/><b>使用例:</b> 反射光の強さが一定の値に到達するまで、ブロックのシーケンスを繰り返します。</p>]]></Description>
@@ -111,8 +117,8 @@
       <Block Mode="SwitchColorSensorPLUSCompareColor" DisplayName="" Link="page.html?Path=blocks%2FLEGO%2FCaseSelector.html#Mode_SwitchColorSensorCompareColor">
         <Description><![CDATA[<p><b>使用例:</b> 選択した色の一つが検知されたかどうかによって 2 つ以上の条件を選択します。<br/><b>参照:</b> カラー センサーを使用する</p>]]></Description>
       </Block>
-      <Block Mode="SwitchColorSensorPLUSCompareRawRGB" DisplayName="">
-        <Description><![CDATA[<p><b>モード:</b> カラー センサー - 比較 - RawRGB<br/><b>使用例:</b> 指定したRGB値の範囲に入っているかどうかで、2つのブロックのシーケンスから選択します。</p>]]></Description>
+      <Block Mode="SwitchColorSensorPLUSCompareRGB" DisplayName="">
+        <Description><![CDATA[<p><b>モード:</b> カラー センサー - 比較 - RGB<br/><b>使用例:</b> 指定したRGB値の範囲に入っているかどうかで、2つのブロックのシーケンスから選択します。</p>]]></Description>
       </Block>
       <Block Mode="SwitchColorSensorPLUSCompareReflectedLight" DisplayName="" Link="page.html?Path=editor%2FUsingSensors_Color.html#Mode_SwitchColorSensorCompareReflectedLight">
        <Description><![CDATA[<p><b>モード:</b> カラー センサー - 比較 - 反射光の強さ<br/><b>使用例:</b> 反射光の強さに応じて 2 つのブロックのシーケンスから選択します。</p>]]></Description>

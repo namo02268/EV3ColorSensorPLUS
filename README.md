@@ -4,23 +4,23 @@ EV3 ColorSensor PLUS は、LEGO MINDSTORMS EV3 向けのカスタムプログラ
 
 本ブロックでは、以下の2つのモードをサポートしています。
 
-### Raw RGB 測定モード
+### RGB 測定モード
 センサーから読み取った Red / Green / Blue（RGB）の生データ をそのまま出力します。各色の値は 0〜1024 の範囲です。
 
 📷 使用イメージ：
 
-![RawRGB_Measure](./images/README_RawRGB_Measure.png)
+![RGB_Measure](./images/README_RGB_Measure.png)
 
-### Raw RGB 比較モード
+### RGB 比較モード
 指定したRGBの範囲と現在のセンサー値を比較し、条件に一致するかどうかを 真偽値（true / false） で出力します。
 スイッチブロックやループブロックの条件として使用でき、色に応じた分岐処理が簡単に作れます。
 
 📷 使用イメージ：
 
-![RawRGB_Compare](./images/README_RawRGB_Compare.png)
+![RGB_Compare](./images/README_RGB_Compare.png)
 
 ## 特徴
-✅ RawRGBの取得
+✅ RGBの取得
 
 EV3標準ブロックでは取得できない生のRGB値を読み取れます。
 
@@ -45,4 +45,4 @@ EV3標準ブロックでは取得できない生のRGB値を読み取れます�
 
 📷 プログラム例：
 
-![RawRGB_Example](./images/README_RawRGB_Example.png)
+![RGB_Example](./images/README_RGB_Example.png)
