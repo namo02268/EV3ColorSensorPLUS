@@ -4,8 +4,8 @@
         <VirtualInstrument IsTopLevel="false" IsReentrant="false" Version="1.0.2.0" xmlns="http://www.ni.com/VirtualInstrument.xsd">
             <DataItem Name="SequenceIn" DataType="NationalInstruments:SourceModel:DataTypes:X3SequenceWireDataType" DefaultTerminalDirection="Output" CallUsage="None" CallDirection="Input" CallIndex="6" />
             <DataItem Name="SequenceOut" DataType="NationalInstruments:SourceModel:DataTypes:X3SequenceWireDataType" DefaultTerminalDirection="Input" CallUsage="None" CallDirection="Output" CallIndex="6" />
-            <DataItem Name="Comparison" DataType="Int32" DefaultTerminalDirection="Output" DefaultValue="4" />
-            <DataItem Name="Threshold" DataType="Single" DefaultTerminalDirection="Output" DefaultValue="50" />
+            <DataItem Name="Comparison" DataType="Int32" DefaultTerminalDirection="Output" CallUsage="None" CallDirection="Input" CallIndex="1" DefaultValue="4" />
+            <DataItem Name="Threshold" DataType="Single" DefaultTerminalDirection="Output" CallUsage="None" CallDirection="Input" CallIndex="2" DefaultValue="50" />
             <DataItem Name="Result" DataType="Boolean" DefaultTerminalDirection="Input" CallUsage="None" CallDirection="Output" CallIndex="1" DefaultValue="False" />
             <DataItem Name="Port" DataType="Single" DefaultTerminalDirection="Output" CallUsage="None" CallDirection="Input" CallIndex="0" DefaultValue="0" />
             <DataItem Name="Value" DataType="Single" DefaultTerminalDirection="Input" CallUsage="None" CallDirection="Output" CallIndex="0" DefaultValue="0" />
@@ -17,7 +17,7 @@
                 <Wire Id="w7" Joints="N(n6:Value) N(n2:Comparison)" />
                 <Wire Id="w11" Joints="N(n10:Value) N(n2:Second\ Operand)" />
                 <Wire Id="w14" Joints="N(n13:Value) N(n18:Port)" />
-                <Wire Id="w15" Joints="N(n18:Value) h(140) h(126) v(-77) N(n15:Value) B(1) v(84) N(n2:First\ Operand)" />
+                <Wire Id="w15" Joints="N(n18:Value) h(140) v(84) N(n2:First\ Operand) B(1) h(126) v(-77) N(n15:Value)" />
                 <Wire Id="w19" Joints="N(n2:Result) h(7) v(7) h(168) N(b20:n42)" />
                 <Wire Id="w20" Joints="N(b17:n42) h(13) v(-133) N(n12:Value)" />
                 <MethodCall Id="n2" Bounds="875 189 56 56" Target="ComparisonCore\.vix">
@@ -26,11 +26,11 @@
                     <Terminal Id="Second\ Operand" Direction="Input" Wire="w11" DataType="Single" Hotspot="0 0.5" Bounds="0 42 14 14" />
                     <Terminal Id="Result" Direction="Output" Wire="w19" DataType="Boolean" Hotspot="1 0.5" Bounds="42 0 14 14" />
                 </MethodCall>
-                <DataAccessor DataItem="Comparison" Id="n6" Bounds="630 203 84 14">
-                    <Terminal Id="Value" Direction="Output" Wire="w7" Hotspot="1 0.5" Bounds="0 0 84 14" />
+                <DataAccessor DataItem="Comparison" Id="n6" Bounds="616 203 98 14">
+                    <Terminal Id="Value" Direction="Output" Wire="w7" Hotspot="1 0.5" Bounds="0 0 98 14" />
                 </DataAccessor>
-                <DataAccessor DataItem="Threshold" Id="n10" Bounds="651 231 70 14">
-                    <Terminal Id="Value" Direction="Output" Wire="w11" Hotspot="1 0.5" Bounds="0 0 70 14" />
+                <DataAccessor DataItem="Threshold" Id="n10" Bounds="637 231 84 14">
+                    <Terminal Id="Value" Direction="Output" Wire="w11" Hotspot="1 0.5" Bounds="0 0 84 14" />
                 </DataAccessor>
                 <DataAccessor DataItem="Result" Id="n12" Bounds="1337 196 70 14">
                     <Terminal Id="Value" Direction="Input" Wire="w20" Hotspot="0 0.5" Bounds="0 0 70 14" />
