@@ -29,7 +29,7 @@ EV3 ColorSensor PLUS は、LEGO MINDSTORMS EV3 向けのカスタムプログラ
 ![RGB_Measure](./images/README_RawREF_Compare.png)
 
 ## インストール方法
-- [Releases ページ](https://github.com/namo02268/EV3ColorSensorPLUS/releases)よりColorSensorPLUS.ev3b をダウンロード
+- [Releases ページ](https://github.com/namo02268/EV3ColorSensorPLUS/releases)より 「EV3ColorSensorPLUS.ev3b」 をダウンロード
 - EV3ソフトウェアを起動し、
 　[ツール] > [ブロック インポート] を開く
 - ダウンロードした .ev3b ファイルを読み込む
