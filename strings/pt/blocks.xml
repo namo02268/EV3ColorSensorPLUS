@@ -10,6 +10,9 @@
       <Parameter Name="Color" DisplayName="Color">
         <Description><![CDATA[<p><b>Type:</b> Numeric<br/><b>Notes:</b> Detected color number: <br/>0 = No Color <br/>1 = Black <br/>2 = Blue <br/>3 = Green <br/>4 = Yellow <br/>5 = Red <br/>6 = White <br/>7 = Brown</p>]]></Description>
       </Parameter>
+      <Parameter Name="Set of colors" DisplayName="Set of Colors">
+        <Description><![CDATA[<p><b>Type:</b> Numeric Array<br/><b>Allowed Values:</b> Each element: 0 – 7<br/><b>Notes:</b> Selected color(s) to test for in Compare – Color mode:<br/>0 = No Color <br/>1 = Black <br/>2 = Blue <br/>3 = Green <br/>4 = Yellow <br/>5 = Red <br/>6 = White <br/>7 = Brown</p>]]></Description>
+      </Parameter>
       <Parameter Name="Value" DisplayName="Light">
         <Description><![CDATA[<p><b>Type:</b> Numeric<br/><b>Notes:</b> The sensor data value used for a Compare mode.</p>]]></Description>
       </Parameter>
@@ -81,6 +84,9 @@
       </Block>
       <Block Mode="CompareReflectedLight" DisplayName="Reflected Light Intensity">
         <Description><![CDATA[The Compare – Reflected Light Intensity and Compare – Ambient Light Intensity modes compare the detected light intensity to the Threshold Value using the selected Compare Type. The True/False result is output in Compare Result, and the detected light intensity is output in Measured Value.]]></Description>
+      </Block>
+      <Block Mode="CompareRawReflectedLight" DisplayName="Raw Reflected Light Intensity">
+        <Description><![CDATA[The Compare – Raw Reflected Light Intensity mode compare the detected light intensity to the Threshold Value using the selected Compare Type. The True/False result is output in Compare Result, and the detected light intensity is output in Measured Value.]]></Description>
       </Block>
       <Block Mode="CompareAmbientLight" DisplayName="Ambient Light Intensity">
         <Description><![CDATA[The Compare – Reflected Light Intensity and Compare – Ambient Light Intensity modes compare the detected light intensity to the Threshold Value using the selected Compare Type. The True/False result is output in Compare Result, and the detected light intensity is output in Measured Value.]]></Description>
