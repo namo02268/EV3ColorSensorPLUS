@@ -4,7 +4,7 @@
     <PolyGroup Name="ColorSensorPLUS" BlockFamily="Sensor">
       <Parameter Name="Port" CompilerDirectives="OneInputPort" Direction="Input" DefaultValue="1.3" />
 
-      <Parameter Name="Color" Identification="Identification_MeasuredColor.png" DataType="Single" Direction="Output" />
+      <Parameter Name="Color" Identification="Identification_MeasuredColor.png" ValueDisplay="Identification_Color.xml" Configuration="Identification_Color.xml" Direction="Output" DataType="Single" ModeCanSpecifyProperties="True" />
       <Parameter Name="Value" Identification="Identification_MeasuredLight.png" DataType="Single" Direction="Output" />
       <Parameter Name="Comparison" Direction="Input" Configuration="Identification_ComparisonType.xml" Identification="Identification_ComparisonType.xml" DataType="Int32" DefaultValue="4" />
       <Parameter Name="Threshold" Identification="Identification_Threshold_ColorSensor_2.xml" DataType="Single" Direction="Input" DefaultValue="50" MinValue="0" MaxValue="100" />
@@ -39,9 +39,9 @@
         <Mode>MeasureColor</Mode>
         <Reference Type="VILib" Name="ColorPLUSValue.vix" />
         <ParameterReference Name="Port" />
-        <ParameterReference Name="Color" />
+        <ParameterReference Name="Color"  CompilerDirectives="Result"/>
         <PaletteInfo Weight="0.5" />
-        <BlockInterface>Measure</BlockInterface>
+        <BlockInterface>Selector</BlockInterface>
         <Flags>PBROnly</Flags>
         <Hardware></Hardware>
       </Block>
