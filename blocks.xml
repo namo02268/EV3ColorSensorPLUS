@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <EditorDefinitions>
-  <PolyGroups ModuleName="ColorSensorPLUS" ModuleVersion="1.0.0">
+  <PolyGroups ModuleName="ColorSensorPLUS" ModuleVersion="1.1.0">
     <PolyGroup Name="ColorSensorPLUS" BlockFamily="Sensor">
       <Parameter Name="Port" CompilerDirectives="OneInputPort" Direction="Input" DefaultValue="1.3" />
 
