@@ -7,7 +7,7 @@
       <Parameter Name="Color" Identification="Identification_MeasuredColor.png" ValueDisplay="Identification_Color.xml" Configuration="Identification_Color.xml" Direction="Output" DataType="Single" ModeCanSpecifyProperties="True" />
       <Parameter Name="Value" Identification="Identification_MeasuredLight.png" DataType="Single" Direction="Output" />
       <Parameter Name="Comparison" Direction="Input" Configuration="Identification_ComparisonType.xml" Identification="Identification_ComparisonType.xml" DataType="Int32" DefaultValue="4" />
-      <Parameter Name="Threshold" Identification="Identification_Threshold_ColorSensor_2.xml" DataType="Single" Direction="Input" DefaultValue="50" MinValue="0" MaxValue="100" />
+      <Parameter Name="Threshold" Identification="Identification_Threshold_EV3ColorSensorPLUS.xml" DataType="Single" Direction="Input" DefaultValue="50" MinValue="0" MaxValue="100" />
       <Parameter Name="Result" CompilerDirectives="Result" Identification="Identification_Result.png" DataType="Boolean" Direction="Output"/>
 
       <Parameter Name="CalibrateValueMin" Direction="Input" DataType="Single" Identification="Identification_MeasuredLight.png" DefaultValue="0" MinValue="0" MaxValue="100" />
