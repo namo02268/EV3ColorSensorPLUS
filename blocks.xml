@@ -35,6 +35,7 @@
         <Direction>Input</Direction>
         <DefaultPort>1.3</DefaultPort>
       </Hardware>
+
       <Block>
         <Mode>MeasureColor</Mode>
         <Reference Type="VILib" Name="ColorPLUSValue.vix" />

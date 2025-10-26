@@ -40,15 +40,14 @@ Evaluates the raw reflected light value using preset thresholds and comparison o
 
 ![RGB_Measure](./images/README_RawREF_Compare.png)
 
-## インストール方法
+## インストール方法 (Installation)
 - [Releases ページ](https://github.com/namo02268/EV3ColorSensorPLUS/releases)より 「EV3ColorSensorPLUS.ev3b」 をダウンロード
-- EV3ソフトウェアを起動し、
-　[ツール] > [ブロック インポート] を開く
+- EV3ソフトウェアを起動し、[ツール] > [ブロック インポート] を開く
 - ダウンロードした .ev3b ファイルを読み込む
 - EV3ソフトウェアを再起動
 - 追加されたブロックをプログラムにドラッグ＆ドロップして使用
 
-## Installation
+---
 - Download the "EV3ColorSensorPLUS.ev3b" file from the [Releases page]((https://github.com/namo02268/EV3ColorSensorPLUS/releases)).
 - Launch the EV3 software and open [Tools] > [Block Import].
 - Import the downloaded .ev3b file.

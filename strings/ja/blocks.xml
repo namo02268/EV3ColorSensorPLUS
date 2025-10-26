@@ -22,7 +22,7 @@
         <Description><![CDATA[<p><b>タイプ:</b> 数値<br/><b>可能な入力値:</b> 任意の数<br/><b>備考:</b> センサー データと比較する値</p>]]></Description>
       </Parameter>
       <Parameter Name="Result" DisplayName="比較結果">
-        <Description><![CDATA[<p><b>Type:</b> Logic<br/><b>Notes:</b> True/False result of a Compare mode.</p>]]></Description>
+        <Description><![CDATA[<p><b>タイプ:</b> ロジック<br/><b>備考:</b> 比較モードの真/偽の結果です。</p>]]></Description>
       </Parameter>
       <Parameter Name="CalibrateValueMin" DisplayName="値">
         <Description><![CDATA[<p><b>タイプ:</b> 数値<br/><b>可能な入力値:</b> 0 - 100<br/><b>備考:</b> 調整モードでの光の強さ</p>]]></Description>
