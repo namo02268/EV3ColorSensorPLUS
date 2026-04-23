@@ -22,6 +22,9 @@
       <Parameter Name="Threshold" DisplayName="Threshold Value">
         <Description><![CDATA[<p><b>Type:</b> Numeric<br/><b>Allowed Values:</b> Any number<br/><b>Notes:</b> Value to compare sensor data to</p>]]></Description>
       </Parameter>
+      <Parameter Name="RawThreshold" DisplayName="Threshold Value">
+        <Description><![CDATA[<p><b>Type:</b> Numeric<br/><b>Allowed Values:</b> Any number<br/><b>Notes:</b> Value to compare sensor data to</p>]]></Description>
+      </Parameter>
       <Parameter Name="Result" DisplayName="Compare Result">
         <Description><![CDATA[<p><b>Type:</b> Logic<br/><b>Notes:</b> True/False result of a Compare mode.</p>]]></Description>
       </Parameter>
