@@ -18,12 +18,12 @@
       <Parameter Name="Green" Identification="Identification_Color_Green.png" DataType="Single" Direction="Output" />
       <Parameter Name="Blue" Identification="Identification_Color_Blue.png" DataType="Single" Direction="Output" />
 
-      <Parameter Name="Red_Min" Identification="Identification_Color_Red_Min.png" DataType="Single" Direction="Input" DefaultValue="20"/>
-      <Parameter Name="Red_Max" Identification="Identification_Color_Red_Max.png" DataType="Single" Direction="Input" DefaultValue="80"/>
-      <Parameter Name="Green_Min" Identification="Identification_Color_Green_Min.png" DataType="Single" Direction="Input" DefaultValue="110"/>
-      <Parameter Name="Green_Max" Identification="Identification_Color_Green_Max.png" DataType="Single" Direction="Input" DefaultValue="170"/>
-      <Parameter Name="Blue_Min" Identification="Identification_Color_Blue_Min.png" DataType="Single" Direction="Input" DefaultValue="20"/>
-      <Parameter Name="Blue_Max" Identification="Identification_Color_Blue_Max.png" DataType="Single" Direction="Input" DefaultValue="80"/>
+      <Parameter Name="Red_Min" Identification="Identification_Color_Red_Min.png" DataType="Single" Direction="Input" DefaultValue="20" MinValue="0" MaxValue="1024"/>
+      <Parameter Name="Red_Max" Identification="Identification_Color_Red_Max.png" DataType="Single" Direction="Input" DefaultValue="80" MinValue="0" MaxValue="1024"/>
+      <Parameter Name="Green_Min" Identification="Identification_Color_Green_Min.png" DataType="Single" Direction="Input" DefaultValue="110" MinValue="0" MaxValue="1024"/>
+      <Parameter Name="Green_Max" Identification="Identification_Color_Green_Max.png" DataType="Single" Direction="Input" DefaultValue="170" MinValue="0" MaxValue="1024"/>
+      <Parameter Name="Blue_Min" Identification="Identification_Color_Blue_Min.png" DataType="Single" Direction="Input" DefaultValue="20" MinValue="0" MaxValue="1024"/>
+      <Parameter Name="Blue_Max" Identification="Identification_Color_Blue_Max.png" DataType="Single" Direction="Input" DefaultValue="80" MinValue="0" MaxValue="1024"/>
 
       <Parameter Name="Color_Range" Direction="Input" DataType="Boolean" DefaultValue="True" Identification="Identification_ColorRange.xml" Configuration="Identification_ColorRange.xml" />
 
